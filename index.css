@@ -354,6 +354,7 @@ color: #fff;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    padding: 20px;
 }
 
 .grid-3{
@@ -415,6 +416,7 @@ color: #fff;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    padding: 20px;
 }
 
 .name{
@@ -654,13 +656,25 @@ color: #fff;
 }
 
 .footer{
-    margin: 80px 100px;
+    margin: 40px 0;
+    padding: 0 8%;
 }
 
 .foot{
-    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
+    flex-direction: row;
     display: flex;
-    gap: 200px;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    /* padding: 40px 8%; */
+}
+
+.foot h1,
+.foot h3,
+.foot h4{
+    margin-top: 0;
 }
 
 .footer-one h1{
@@ -693,10 +707,6 @@ color: #fff;
     margin-bottom: 13px;
     transition: color 0.3s ease;
 
-}
-
-link a:hover{
-    color: #e24d9a;
 }
 
 .footer-two h4{
@@ -746,7 +756,15 @@ font-weight: 400;
 line-height: 24px;
 color: #fff;
 }
-
+/* 
+.foor p{
+    margin:auto;
+    margin-top:10;
+    max-width:7xl; 
+    border-top: black; 
+    padding-top: 24px;
+    text-align:center;
+    color: white; */
 
 
 @media (max-width: 900px) {
