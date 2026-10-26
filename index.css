@@ -756,78 +756,59 @@ font-weight: 400;
 line-height: 24px;
 color: #fff;
 }
-/* 
-.foor p{
-    margin:auto;
-    margin-top:10;
-    max-width:7xl; 
-    border-top: black; 
-    padding-top: 24px;
-    text-align:center;
-    color: white; */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hero,
+.container,
+.foot,
+.grid,
+.func {
+    min-width: 0;
+}
+
+.body p {
+    white-space: normal;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 
-@media (max-width: 900px) {
+@media screen and (max-width: 1024px) {
 
+    /* Navigation */
     .navbar {
-        width: calc(100% - 40px);
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .nav-link {
-        gap: 16px;
-    }
-
-    .hero {
-        gap: 24px;
-    }
-
-    /* Featured Content: two cards per row */
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 10px 35px;
         gap: 20px;
     }
 
-    /* Center the third card on its own row */
-    .grid-3 {
-        grid-column: 1 / -1;
-        width: calc(50% - 10px);
-        justify-self: center;
-    }
-
-    .func {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .foot {
-        gap: 28px;
-    }
-}
-
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
-
-@media (max-width: 600px) {
-
-    /* Navbar */
-    .navbar {
-        width: calc(100% - 32px);
-        margin: 12px auto;
-        padding: 0;
-        gap: 14px;
-    }
-
-    .logo h2 {
-        margin: 0;
-    }
-
     .nav-link {
-        order: 3;
-        width: 100%;
-        justify-content: flex-start;
-        gap: 18px;
+        gap: 12px;
+        flex-wrap: wrap;
     }
 
     .nav-link a {
@@ -835,106 +816,61 @@ color: #fff;
     }
 
     .nav-icon {
-        padding: 0;
-        gap: 12px;
+        gap: 10px;
+        padding: 5px;
     }
 
-    .nav-icon p {
-        padding: 8px 12px;
-        font-size: 14px;
+    /* Hero section */
+    .hero-section {
+        margin: 30px 35px;
     }
 
-    /* Main sections */
-    .hero-section,
-    .about,
-    .function,
-    .creators,
-    .footer {
-        width: calc(100% - 32px);
-    }
-
-    /* Hero */
     .hero {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 28px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
     }
 
     .body h1 {
-        font-size: clamp(32px, 9vw, 44px);
+        font-size: 42px;
         line-height: 1.15;
+        letter-spacing: -1px;
     }
 
     .body p {
         font-size: 16px;
-        line-height: 1.7;
-    }
-
-    .btn {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .btn button {
-        max-width: 100%;
+        line-height: 26px;
     }
 
     .image img {
         width: 100%;
-        max-height: 420px;
+        max-height: 500px;
+        object-fit: cover;
     }
 
-    /* About */
-    .about {
-        padding: 20px 0;
+    /* About section */
+    .about,
+    .actions {
+        margin-left: 35px;
+        margin-right: 35px;
     }
 
     .hero-two {
-        margin-top: 48px;
+        width: 95%;
+        margin-top: 80px;
     }
 
-    .hero-two h1 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-
-    .hero-two p {
-        font-size: 15px;
-        line-height: 1.8;
-    }
-
-    /* Featured Content */
+    /* Featured cards */
     .featured-content {
-        margin-top: 65px;
-        padding: 0 16px;
-    }
-
-    .featured-content h1 {
-        font-size: 30px;
-        margin-bottom: 24px;
+        margin-top: 120px;
     }
 
     .content {
-        width: 100%;
+        margin-left: 35px;
+        margin-right: 35px;
     }
 
-    /* One full-width photo card per row */
     .grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 22px;
-    }
-
-    .grid-1,
-    .grid-2,
-    .grid-3 {
-        grid-column: auto;
-        width: 100%;
-    }
-
-    .grid-1 > img,
-    .grid-2 > img,
-    .grid-3 > img {
-        width: 100%;
-        height: 220px;
+        gap: 15px;
     }
 
     .grid-1 h2,
@@ -943,53 +879,235 @@ color: #fff;
         font-size: 20px;
     }
 
-    /* Keep author details at the bottom of each card */
-    .review-con,
-    .review-cont,
-    .review-contain {
-        margin-top: auto;
+    .grid-1 h2,
+    .grid-1 p,
+    .grid-1 .review-con,
+    .grid-2 h2,
+    .grid-2 p,
+    .grid-2 .review-con,
+    .grid-3 h2,
+    .grid-3 p,
+    .grid-3 .review-con {
+        margin-left: 12px;
+        margin-right: 12px;
     }
 
-    /* Explore More Content button */
-    .featured-content .explore-more {
-        margin-top: 26px;
-        padding-bottom: 10px;
-    }
-
-    .featured-content .explore-more button {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    /* How it works */
-    .function .header {
-        margin-top: 80px;
-        font-size: 21px;
+    /* Functions */
+    .function {
+        margin: 20px 35px;
     }
 
     .func {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    /* Creators */
+    .creators {
+        margin: 120px 35px 20px;
+    }
+
+    .creator-info {
+        padding: 25px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 0 5%;
+    }
+
+    .foot {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .foot > div {
+        min-width: 0;
+    }
+}
+
+
+/* =====================================
+   TABLETS AND LARGE PHONES
+   768px AND BELOW
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        margin: 15px 20px;
+        padding: 5px 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .logo h2 {
+        font-size: 19px;
+    }
+
+    .nav-link {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .nav-link a {
+        font-size: 14px;
+    }
+
+    .nav-icon {
+        gap: 12px;
+    }
+
+    .nav-icon p {
+        padding: 9px 13px;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* Hero */
+    .hero-section {
+        margin: 30px 20px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .body h1 {
+        max-width: 100%;
+        font-size: 40px;
+        line-height: 1.15;
+        letter-spacing: -1px;
+    }
+
+    .body p {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    .btn {
+        flex-wrap: wrap;
+    }
+
+    .btn .bag button,
+    .bg-2 button {
+        padding: 13px 18px;
+        font-size: 14px;
+    }
+
+    .image img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    /* About */
+    .about,
+    .actions {
+        margin: 20px;
+        padding: 25px 10px;
+    }
+
+    .hero-two {
+        width: 100%;
+        margin-top: 65px;
+    }
+
+    .hero-two h1,
+    .featured-content h1,
+    .contents h1 {
+        font-size: 30px;
+        line-height: 1.3;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-two p,
+    .contents p {
+        font-size: 15px;
+        line-height: 27px;
+    }
+
+    /* Featured cards */
+    .featured-content {
+        margin-top: 90px;
+    }
+
+    .content {
+        margin: 0 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
     }
 
-    .func > div {
-        padding: 20px;
-        border-radius: 14px;
-        background: linear-gradient(135deg, #171a45, #251a48);
+    .grid-1,
+    .grid-2,
+    .grid-3 {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .grid-1 img,
+    .grid-2 img,
+    .grid-3 img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    .grid-1 h2,
+    .grid-2 h2,
+    .grid-3 h2 {
+        font-size: 19px;
+    }
+
+    .grid-1 p,
+    .grid-2 p,
+    .grid-3 p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Functions */
+    .function {
+        margin: 20px;
+    }
+
+    .function .header {
+        margin-top: 100px;
+        font-size: 22px;
+    }
+
+    .func {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 
     .func h3 {
         font-size: 21px;
-        line-height: 1.35;
+    }
+
+    .func p {
+        font-size: 15px;
+        line-height: 25px;
     }
 
     .button-co button {
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
 
-    /* Top creators */
+    /* Creators */
     .creators {
-        margin-top: 90px;
+        margin: 100px 20px 20px;
     }
 
     .creators h1 {
@@ -1007,112 +1125,300 @@ color: #fff;
     }
 
     .box img {
-        height: 240px;
+        width: 100%;
+        height: auto;
+        max-height: 400px;
         object-fit: cover;
     }
 
     .creator-info {
-        padding: 24px;
+        padding: 20px 5px;
     }
 
     /* Call to action */
-    .action {
-        width: calc(100% - 32px);
-        margin: 60px auto;
-        padding: 24px 16px;
-    }
-
     .contents {
         width: 100%;
+        margin-top: 60px;
     }
 
     .contents h1 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-
-    .contents p {
-        font-size: 15px;
-        line-height: 1.8;
+        margin-top: 60px;
     }
 
     /* Footer */
     .footer {
-        margin-top: 60px;
-        margin-bottom: 30px;
+        margin-top: 40px;
+        padding: 0 20px;
     }
 
     .foot {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 28px 20px;
+        gap: 30px;
     }
 
-    .footer-one {
-        grid-column: 1 / -1;
+    .foot .footer-one p {
+        max-width: 100%;
     }
 }
 
-/* =========================
-   VERY SMALL PHONES
-========================= */
 
-@media (max-width: 360px) {
+/* =====================================
+   MOBILE PHONES
+   480px AND BELOW
+===================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* Navigation */
+    .navbar {
+        margin: 12px 15px;
+        gap: 12px;
+    }
+
+    .logo h2 {
+        font-size: 17px;
+    }
 
     .nav-link {
-        gap: 10px;
+        gap: 12px;
     }
 
     .nav-link a {
         font-size: 12px;
     }
 
-    .btn {
-        flex-direction: column;
-        align-items: stretch;
+    .nav-icon {
+        gap: 8px;
     }
 
-    .btn button {
-        width: 100%;
+    .nav-icon i {
+        font-size: 17px;
+    }
+
+    .nav-icon p {
+        padding: 8px 10px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    /* Hero */
+    .hero-section {
+        margin: 25px 15px;
+    }
+
+    .hero {
+        gap: 25px;
+    }
+
+    .body h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        letter-spacing: -0.7px;
+    }
+
+    .body p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .btn {
+        gap: 10px;
+    }
+
+    .btn .bag button,
+    .bg-2 button {
+        padding: 11px 13px;
+        font-size: 13px;
+        line-height: 20px;
+        border-radius: 8px;
+    }
+
+    .image img {
+        max-height: 350px;
+        border-radius: 12px;
+    }
+
+    /* About */
+    .about,
+    .actions {
+        margin: 15px;
+        padding: 20px 0;
+    }
+
+    .hero-two {
+        margin-top: 45px;
+    }
+
+    .hero-two h1,
+    .featured-content h1,
+    .contents h1 {
+        font-size: 26px;
+        line-height: 1.3;
+        margin-bottom: 18px;
+    }
+
+    .hero-two p,
+    .contents p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    /* Featured cards */
+    .featured-content {
+        margin-top: 70px;
+    }
+
+    .content {
+        margin: 0 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .grid-1 img,
+    .grid-2 img,
+    .grid-3 img {
+        height: 230px;
+    }
+
+    .grid-1 h2,
+    .grid-2 h2,
+    .grid-3 h2 {
+        font-size: 21px;
+    }
+
+    .grid-1 h2,
+    .grid-1 p,
+    .grid-1 .review-con,
+    .grid-2 h2,
+    .grid-2 p,
+    .grid-2 .review-con,
+    .grid-3 h2,
+    .grid-3 p,
+    .grid-3 .review-con {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .review-con {
+        margin-top: 20px;
+    }
+
+    .review-cont img,
+    .review-contain img {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+    }
+
+    .button-grid button {
+        padding: 12px 17px;
+        font-size: 14px;
+    }
+
+    /* Functions */
+    .function {
+        margin: 15px;
+    }
+
+    .function .header {
+        margin-top: 70px;
+        font-size: 20px;
+    }
+
+    .func {
+        gap: 20px;
+    }
+
+    .func h3 {
+        font-size: 19px;
+    }
+
+    .func p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .button-co button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* Creators */
+    .creators {
+        margin: 75px 15px 15px;
+    }
+
+    .creators h1 {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+
+    .creator-info {
+        padding: 20px 0;
+        font-size: 14px;
+    }
+
+    .creator-info h4 {
+        font-size: 18px;
+    }
+
+    .creator-info p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .arrow {
+        margin: 20px 0;
+    }
+
+    /* Call to action */
+    .contents {
+        margin-top: 45px;
+    }
+
+    .contents h1 {
+        margin-top: 45px;
+    }
+
+    .button-act button {
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 0 15px;
+        margin: 30px 0;
     }
 
     .foot {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 
-    .footer-one {
-        grid-column: auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .featured-content .content {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
+    .footer-one h1 {
+        font-size: 20px;
     }
 
-    .featured-content .grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        width: 100%;
-        gap: 24px;
+    .foot .footer-one p {
+        max-width: 280px;
+        font-size: 14px;
     }
 
-    .featured-content .grid-1,
-    .featured-content .grid-2,
-    .featured-content .grid-3 {
-        width: 100%;
-        min-width: 0;
-        max-width: 100%;
-        grid-column: auto;
+    .footer-two h4,
+    .footer-three h3,
+    .footer-four h3 {
+        margin-bottom: 12px;
     }
 
-    .featured-content .grid-1 > img,
-    .featured-content .grid-2 > img,
-    .featured-content .grid-3 > img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
+    .footer-two .link,
+    .footer-three p,
+    .footer-four p {
+        font-size: 14px;
+        line-height: 23px;
     }
 }
